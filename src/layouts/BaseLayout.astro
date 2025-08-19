@@ -119,6 +119,21 @@ const businessSchema = {
 	</head>
 	<body>
 		<slot />
+		<script is:inline>
+			(() => {
+				try {
+					const imgs = Array.from(document.querySelectorAll('img'));
+					for (const img of imgs) {
+						if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+						if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+					}
+					const iframes = Array.from(document.querySelectorAll('iframe'));
+					for (const f of iframes) {
+						if (!f.hasAttribute('loading')) f.setAttribute('loading', 'lazy');
+					}
+				} catch {}
+			})();
+		</script>
 	</body>
 </html>
 
