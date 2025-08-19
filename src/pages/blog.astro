@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Blog – Elektriker Berlin" description="Tipps, Anleitungen und Neuigkeiten rund um Elektroinstallation, Sicherheit und Smart Home in Berlin.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Blog</h1>
+			<p>Neuigkeiten, Ratgeber und Praxis‑Tipps aus unserem Berliner Elektro‑Alltag: Sicherheit, Normen, Smart Home, Wallbox & mehr.</p>
+		</section>
+		<section class="grid">
+			<div class="card">
+				<h3>Was tun, wenn der FI‑Schalter auslöst?</h3>
+				<p>Kurze Checkliste, typische Ursachen und wann der Notdienst sinnvoll ist.</p>
+				<p><a href="#">Weiterlesen</a></p>
+			</div>
+			<div class="card">
+				<h3>Wallbox in Berlin: Anmeldung & Installation</h3>
+				<p>Von der Netzbetreiber‑Anmeldung bis zur Montage – so läuft es ab.</p>
+				<p><a href="#">Weiterlesen</a></p>
+			</div>
+			<div class="card">
+				<h3>Sicherungskasten modernisieren</h3>
+				<p>FI/LS, Überspannungsschutz und Dokumentation – worauf es ankommt.</p>
+				<p><a href="#">Weiterlesen</a></p>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+

@@ -9,6 +9,7 @@ const current = Astro.url.pathname;
 	<div class="menu">
 		<a href="/" aria-current={current === '/' ? 'page' : undefined}>Startseite</a>
 		<a href="/services" aria-current={current === '/services' ? 'page' : undefined}>Leistungen</a>
+		<a href="/blog" aria-current={current === '/blog' ? 'page' : undefined}>Blog</a>
 		<a href="/locations" aria-current={current === '/locations' ? 'page' : undefined}>Einsatzgebiete</a>
 		<a href="/about" aria-current={current === '/about' ? 'page' : undefined}>Über uns</a>
 		<a href="/contact" aria-current={current === '/contact' ? 'page' : undefined}>Kontakt</a>
