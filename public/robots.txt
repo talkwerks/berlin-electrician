@@ -1,0 +1,29 @@
+# robots.txt for Berlin Elektriker – optimized for crawling
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&gclid&fbclid /
+
+User-agent: *
+Allow: /
+Crawl-delay: 5
+
+Sitemap: https://berlin-electrician.vercel.app/sitemap.xml
+
