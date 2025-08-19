@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const bezirke = [
+	"Mitte",
+	"Friedrichshain-Kreuzberg",
+	"Pankow",
+	"Charlottenburg-Wilmersdorf",
+	"Spandau",
+	"Steglitz-Zehlendorf",
+	"Tempelhof-Schöneberg",
+	"Neukölln",
+	"Treptow-Köpenick",
+	"Marzahn-Hellersdorf",
+	"Lichtenberg",
+	"Reinickendorf",
+];
+---
+<BaseLayout title="Elektriker Berlin – Leistungen, Notdienst & Ablauf" description="Was ist enthalten, häufige Probleme, Ablauf, Vorteile, FAQ, Notdienst und Einsatzgebiete. Meisterbetrieb für Elektro in Berlin.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<span class="kicker">Ihr Meisterbetrieb in Berlin</span>
+			<h1>Elektriker Berlin – Leistungen & Notdienst im Detail</h1>
+			<p>Hier finden Sie alles Wichtige auf einen Blick: Was enthalten ist, welche Probleme wir täglich lösen, wie unser Ablauf funktioniert und warum wir der richtige Partner für Ihr Projekt sind.</p>
+			<a class="cta" href="/contact">Jetzt Angebot anfragen</a>
+		</section>
+
+		<section class="section">
+			<div class="card">
+				<h2>Was ist enthalten</h2>
+				<ul>
+					<li>Feste Anfahrtspauschale innerhalb Berlins</li>
+					<li>Fehlerdiagnose vor Ort inkl. Messungen (bis 30 Min inbegriffen)</li>
+					<li>Dokumentation und Empfehlung (Fotos, Messprotokoll auf Wunsch)</li>
+					<li>Material für Kleinreparaturen (z. B. WAGO, Dübel, Schrauben) vorrätig</li>
+					<li>Fachgerechte Ausführung nach VDE 0100, VDE 0105</li>
+					<li>Sauberes Arbeiten mit Abdeckung/Schutz</li>
+					<li>Transparente Festpreise für Standardleistungen (z. B. Herd, Lampe)</li>
+					<li>Gewährleistung auf unsere Arbeiten</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Häufige Probleme, die wir lösen</h2>
+				<ul>
+					<li>FI‑Schalter löst aus / RCD Störung</li>
+					<li>Sicherung fliegt raus / Kurzschluss</li>
+					<li>Stromausfall in Wohnung oder Teilkreisen</li>
+					<li>Steckdose warm, schmort oder wackelt</li>
+					<li>Defekte Lichtschalter, Dimmer, Taster</li>
+					<li>Lampe flackert, LED leuchtet nach</li>
+					<li>Kabel angebohrt / Leitungsschaden</li>
+					<li>Durchlauferhitzer, Herd oder Ofen ohne Funktion</li>
+					<li>Sprechanlage/Klingel ohne Ton/Strom</li>
+					<li>Überspannungsschaden nach Gewitter</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Unser Ablauf – Schritt für Schritt</h2>
+				<ol>
+					<li>Anfrage: Telefon, E‑Mail oder Formular mit kurzer Problembeschreibung</li>
+					<li>Termin & Preisauskunft: Zeitfenster, Anfahrt, ggf. Festpreis</li>
+					<li>Diagnose vor Ort: Sichtprüfung, Messungen, Fehleranalyse</li>
+					<li>Freigabe: Transparente Lösungsvorschläge, Material/Arbeitszeit</li>
+					<li>Ausführung: Fachgerecht, sauber, dokumentiert</li>
+					<li>Abnahme: Funktionsprüfung, Übergabe, Rechnung/Protokoll</li>
+				</ol>
+				<p><a href="/contact">Jetzt Termin vereinbaren</a></p>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Warum wir</h2>
+				<ul>
+					<li>Meisterbetrieb: Qualifizierte Elektriker, normgerecht dokumentiert</li>
+					<li>Schnell vor Ort: In allen Bezirken Berlins im Einsatz</li>
+					<li>Transparente Preise: Klare Angebote, Festpreise für Standardjobs</li>
+					<li>Saubere Ausführung: Schutzmaßnahmen, aufgeräumte Übergabe</li>
+					<li>Gewährleistung & Versicherung: Sicherheit für Sie und Ihr Objekt</li>
+					<li>Gute Erreichbarkeit: Telefon, E‑Mail, auf Wunsch WhatsApp</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Notdienst / 24/7</h2>
+				<p>Bei Stromausfall, FI‑Auslösung oder Gefahr sind wir auch außerhalb der Geschäftszeiten erreichbar.</p>
+				<ul>
+					<li>24/7 erreichbar für Notfälle</li>
+					<li>Direkter Kontakt, keine Vermittlungsplattform</li>
+					<li>Faire Zuschläge für Nacht/Wochenende</li>
+				</ul>
+				<p><a class="cta" href="tel:+493012345678">Jetzt Notdienst anrufen</a></p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="card">
+				<h2>FAQs</h2>
+				<details>
+					<summary>Was kostet ein Einsatz?</summary>
+					<p>Wir arbeiten mit klaren Anfahrtspauschalen innerhalb Berlins. Die Fehlerdiagnose ist bis 30 Minuten enthalten. Für Standardleistungen bieten wir Festpreise an; darüber hinaus rechnen wir transparent nach Zeit/Material ab.</p>
+				</details>
+				<details>
+					<summary>Wie schnell sind Sie vor Ort?</summary>
+					<p>In der Regel erhalten Sie innerhalb von 24–48 Stunden einen Termin. Im Notfall sind wir – je nach Bezirk und Auslastung – kurzfristig verfügbar.</p>
+				</details>
+				<details>
+					<summary>Welche Zahlungsmethoden bieten Sie an?</summary>
+					<p>Üblicherweise per EC/Karte oder Überweisung. Bei Notdienst ist Kartenzahlung möglich.</p>
+				</details>
+				<details>
+					<summary>Übernehmen Sie auch kleine Jobs?</summary>
+					<p>Ja. Vom Lampenwechsel bis zur Zählerplatz‑Modernisierung – wir unterstützen Sie bei kleinen und großen Aufgaben.</p>
+				</details>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="card">
+				<h2>Einsatzgebiet Berlin</h2>
+				<p>Wir sind in allen Bezirken Berlins für Sie im Einsatz. Typische Anfahrtszeiten: 20–60 Minuten je nach Lage und Verkehr.</p>
+				<div class="locations-list">
+					{bezirke.map((b) => (<div>{b}</div>))}
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+
