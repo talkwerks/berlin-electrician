@@ -2,6 +2,7 @@
 const {
 	title = 'Berlin Elektriker – Schneller, zuverlässiger Service',
 	description = 'Elektromeisterbetrieb in Berlin. 24/7 Notdienst, Installationen, Sicherungskasten-Upgrade, Wallbox/EV-Lader, Smart Home & Beleuchtung.',
+	ogImage = '/favicon.svg',
 } = Astro.props;
 
 const areaServed = [
@@ -115,6 +116,17 @@ const businessSchema = {
 		<script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
 		<meta name="theme-color" content="#0b1220" />
 		<meta name="color-scheme" content="dark light" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Berlin Elektriker" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={(new URL(Astro.url.pathname, Astro.site)).toString()} />
+		<meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 	</head>
 	<body>
 		<slot />

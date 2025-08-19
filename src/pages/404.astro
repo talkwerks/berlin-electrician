@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Seite nicht gefunden – Elektriker Berlin" description="Leider konnten wir die gewünschte Seite nicht finden.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Seite nicht gefunden</h1>
+			<p>Die aufgerufene Adresse existiert nicht. Hier sind hilfreiche Links:</p>
+			<div class="grid">
+				<div class="card"><h3>Start</h3><p><a href="/">Zur Startseite</a></p></div>
+				<div class="card"><h3>Leistungen</h3><p><a href="/services">Alle Leistungen</a></p></div>
+				<div class="card"><h3>Kontakt</h3><p><a href="/contact">Kontakt aufnehmen</a></p></div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
