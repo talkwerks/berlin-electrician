@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import critters from 'astro-critters';
+import compress from 'astro-compress';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +11,14 @@ export default defineConfig({
             preload: 'media',
             reduceInlineStyles: false,
             pruneSource: true,
+        }),
+        compress({
+            css: true,
+            html: true,
+            img: true,
+            svg: true,
+            js: true,
+            encodeHTML: true,
         }),
     ],
 });
