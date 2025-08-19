@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "astro": "^5.13.2"
+  },
+  "devDependencies": {
+    "astro-critters": "^2.2.1"
   }
 }
