@@ -1,19 +1,20 @@
 ---
 const current = Astro.url.pathname;
 ---
-<nav class="nav container">
+<nav class="nav container" aria-label="Hauptnavigation">
 	<a class="brand" href="/">
 		<div class="logo" />
 		<span class="name">Berlin Elektriker</span>
 	</a>
-	<div class="menu">
-		<a href="/" aria-current={current === '/' ? 'page' : undefined}>Startseite</a>
-		<a href="/services" aria-current={current === '/services' ? 'page' : undefined}>Leistungen</a>
-		<a href="/blog" aria-current={current === '/blog' ? 'page' : undefined}>Blog</a>
-		<a href="/locations" aria-current={current === '/locations' ? 'page' : undefined}>Einsatzgebiete</a>
-		<a href="/about" aria-current={current === '/about' ? 'page' : undefined}>Über uns</a>
-		<a href="/contact" aria-current={current === '/contact' ? 'page' : undefined}>Kontakt</a>
-	</div>
+	<ul class="menu" role="list">
+		<li><a href="/" aria-current={current === '/' ? 'page' : undefined}>Startseite</a></li>
+		<li><a href="/services" aria-current={current === '/services' ? 'page' : undefined}>Leistungen</a></li>
+		<li><a href="/blog" aria-current={current === '/blog' ? 'page' : undefined}>Blog</a></li>
+		<li><a href="/locations" aria-current={current === '/locations' ? 'page' : undefined}>Einsatzgebiete</a></li>
+		<li><a href="/about" aria-current={current === '/about' ? 'page' : undefined}>Über uns</a></li>
+		<li><a href="/contact" aria-current={current === '/contact' ? 'page' : undefined}>Kontakt</a></li>
+		<li><a class="cta" href="tel:+493012345678">Jetzt anrufen</a></li>
+	</ul>
 </nav>
 
 

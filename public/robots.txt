@@ -25,5 +25,5 @@ User-agent: *
 Allow: /
 Crawl-delay: 5
 
-Sitemap: https://berlin-electrician.vercel.app/sitemap.xml
+Sitemap: https://berlin-electrician.vercel.app/sitemap-index.xml
 

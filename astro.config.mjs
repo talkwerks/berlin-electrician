@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import critters from 'astro-critters';
 import compress from 'astro-compress';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,5 +21,6 @@ export default defineConfig({
             js: true,
             encodeHTML: true,
         }),
+        sitemap(),
     ],
 });

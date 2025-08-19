@@ -22,6 +22,28 @@ import Footer from "../components/Footer.astro";
 					<h3>Anschrift</h3>
 					<p>Beispielstraße 12, 10115 Berlin</p>
 				</div>
+				<div class="card">
+					<h3>Kontaktformular</h3>
+					<form method="post" action="https://formspree.io/f/xblddamo">
+						<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+						<input type="hidden" name="_subject" value="Neue Anfrage über berlin-elektriker.de" />
+						<div style="display:flex;flex-direction:column;gap:8px">
+							<label>
+								<span>Name</span>
+								<input name="name" required placeholder="Ihr Name" />
+							</label>
+							<label>
+								<span>E‑Mail</span>
+								<input type="email" name="email" required placeholder="beispiel@domain.de" />
+							</label>
+							<label>
+								<span>Nachricht</span>
+								<textarea name="message" rows="4" required placeholder="Kurz Ihr Anliegen…"></textarea>
+							</label>
+							<button class="cta" type="submit">Senden</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
