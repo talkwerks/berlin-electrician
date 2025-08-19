@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Über uns – Berlin Elektriker" description="Meisterbetrieb mit Erfahrung aus Wohn- und Gewerbeprojekten in Berlin.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Über uns</h1>
+			<p>Berlin Elektriker ist ein eingetragener Meisterbetrieb. Wir kombinieren saubere Ausführung, Sicherheit nach VDE und freundlichen Service. Unser Team arbeitet transparent – von der Beratung bis zur Dokumentation.</p>
+		</section>
+		<section class="grid">
+			<div class="card"><h3>Meisterbetrieb</h3><p>Qualität und Verantwortung aus einer Hand.</p></div>
+			<div class="card"><h3>Termintreu</h3><p>Verbindliche Zusagen, schnelle Kommunikation.</p></div>
+			<div class="card"><h3>Dokumentiert</h3><p>Messprotokolle, Pläne, Abnahmen – sauber dokumentiert.</p></div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+

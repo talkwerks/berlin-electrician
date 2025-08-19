@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Kontakt – Berlin Elektriker" description="Kontaktieren Sie uns für Angebote, Termine und Notfälle.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Kontakt</h1>
+			<p>Rufen Sie uns an oder schreiben Sie eine Nachricht – wir melden uns kurzfristig.</p>
+			<div class="grid">
+				<div class="card">
+					<h3>Telefon</h3>
+					<p><a href="tel:+493012345678">+49 30 123 45 678</a></p>
+				</div>
+				<div class="card">
+					<h3>E-Mail</h3>
+					<p><a href="mailto:hallo@berlin-elektriker.de">hallo@berlin-elektriker.de</a></p>
+				</div>
+				<div class="card">
+					<h3>Anschrift</h3>
+					<p>Beispielstraße 12, 10115 Berlin</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+

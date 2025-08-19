@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const bezirke = [
+	"Mitte",
+	"Friedrichshain-Kreuzberg",
+	"Pankow",
+	"Charlottenburg-Wilmersdorf",
+	"Spandau",
+	"Steglitz-Zehlendorf",
+	"Tempelhof-Schöneberg",
+	"Neukölln",
+	"Treptow-Köpenick",
+	"Marzahn-Hellersdorf",
+	"Lichtenberg",
+	"Reinickendorf",
+];
+---
+<BaseLayout title="Einsatzgebiete – Berlin Elektriker" description="Schneller Vor-Ort-Service in allen Berliner Bezirken.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Einsatzgebiete</h1>
+			<p>Wir sind in ganz Berlin für Sie im Einsatz – kurzfristig und zuverlässig.</p>
+		</section>
+		<section class="section">
+			<div class="card">
+				<h3>Berliner Bezirke</h3>
+				<div class="locations-list">
+					{bezirke.map((b) => (<div>{b}</div>))}
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+

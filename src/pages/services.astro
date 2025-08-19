@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Leistungen – Berlin Elektriker" description="Notdienst, Elektroinstallation, Sicherungskasten, Wallbox, Beleuchtung, Smart Home, E-Check.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<h1>Leistungen</h1>
+			<p class="muted">Transparente Preise, fachgerechte Ausführung nach VDE.</p>
+		</section>
+		<section class="grid">
+			<div class="card"><h3>24/7 Notdienst</h3><p>Stromausfall, Kurzschluss, Fehlerstromschutz (FI), Sicherungen.</p></div>
+			<div class="card"><h3>Elektroinstallation</h3><p>Leitungen, Steckdosen, Schalter, Netzwerk, Zählerplätze.</p></div>
+			<div class="card"><h3>Sicherungskasten</h3><p>FI/LS, Überspannungsschutz, Revision und Dokumentation.</p></div>
+			<div class="card"><h3>Wallbox & Laden</h3><p>Vor-Ort-Check, Montage, Anmeldung beim Netzbetreiber.</p></div>
+			<div class="card"><h3>Beleuchtung</h3><p>LED-Planung, Deckenleuchten, Außenlicht, Dimmer, Präsenz.</p></div>
+			<div class="card"><h3>Smart Home</h3><p>KNX, Homematic, Shelly, WLAN/Bridges, smarte Schalter.</p></div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+

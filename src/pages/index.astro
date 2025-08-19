@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Berlin Elektriker – Ihr Meisterbetrieb in Berlin" description="Elektroinstallationen, Notdienst, Sicherungskasten, Wallbox, Beleuchtung & Smart Home. Schneller Vor-Ort-Service in ganz Berlin.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<span class="kicker">24/7 Notdienst • Fair • Zertifiziert</span>
+			<h1>Elektriker in Berlin – zuverlässig, schnell, transparent</h1>
+			<p>Wir sind Ihr lokaler Elektromeisterbetrieb für Reparaturen, Neuinstallationen und Modernisierung. Ob Kurzschluss, FI-Auslösung, Wallbox, Smart Home oder Beleuchtung – wir erledigen das fachgerecht und termintreu.</p>
+			<div class="grid">
+				<div class="card"><h3>Notdienst</h3><p>Schnelle Hilfe bei Stromausfall, Sicherungen, Fehlersuche.</p></div>
+				<div class="card"><h3>Installationen</h3><p>Leitungen, Steckdosen, Schalter, Beleuchtung, Zählerplatz.</p></div>
+				<div class="card"><h3>Sicherungskasten</h3><p>FI/LS-Upgrade, Überspannungsschutz, Normcheck VDE 0100.</p></div>
+				<div class="card"><h3>Wallbox</h3><p>Beratung, Montage, Anmeldung beim Netzbetreiber.</p></div>
+			</div>
+			<a class="cta" href="/contact">Angebot anfragen</a>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
