@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Seite nicht gefunden - 404 Fehler | Berlin Elektriker" description="Die gesuchte Seite konnte leider nicht gefunden werden. Hier finden Sie den Weg zurück zu unseren wichtigsten Seiten.">
+	<Nav />
+	<main class="container">
+		<section class="hero" style="text-align: center; padding: 80px 0;">
+			<span class="kicker">404 Fehler</span>
+			<h1>Seite nicht gefunden</h1>
+			<p>Die gesuchte Seite konnte leider nicht gefunden werden. Das kann passieren, wenn sich der Link geändert hat oder Sie einen Tippfehler gemacht haben.</p>
+		</section>
+
+		<section class="section">
+			<div class="card" style="text-align: center; padding: 32px;">
+				<h2>🔍 Was können Sie tun?</h2>
+				<p>Nutzen Sie die Navigation oben oder wählen Sie eine der wichtigsten Seiten aus:</p>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h3>🏠 Startseite</h3>
+				<p>Zurück zur Hauptseite mit Überblick über alle Leistungen</p>
+				<a href="/" class="cta">Zur Startseite</a>
+			</div>
+			<div class="card">
+				<h3>⚡ Leistungen</h3>
+				<p>Alle elektrischen Dienstleistungen im Überblick</p>
+				<a href="/services" class="cta">Zu den Leistungen</a>
+			</div>
+			<div class="card">
+				<h3>📍 Einsatzgebiete</h3>
+				<p>Wo wir in Berlin tätig sind</p>
+				<a href="/locations" class="cta">Zu den Einsatzgebieten</a>
+			</div>
+			<div class="card">
+				<h3>📞 Kontakt</h3>
+				<p>Direkter Kontakt für Notfälle und Termine</p>
+				<a href="/contact" class="cta">Kontakt aufnehmen</a>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="card" style="background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #0b1220; text-align: center; padding: 32px;">
+				<h3>🚨 Elektro-Notfall?</h3>
+				<p>Bei dringenden elektrischen Problemen sind wir sofort für Sie da!</p>
+				<div style="margin-top: 24px;">
+					<p>📞 <strong>Notruf: +49 30 123 45 678</strong></p>
+					<p>📱 <strong>WhatsApp: +49 30 123 45 678</strong></p>
+					<p>⏰ <strong>24/7 Notdienst in ganz Berlin</strong></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="card">
+				<h3>🔍 Häufig gesuchte Seiten:</h3>
+				<ul>
+					<li><a href="/elektriker-berlin">Elektriker Berlin - Alle Leistungen im Detail</a></li>
+					<li><a href="/berlin">Berlin - Lokale Servicegebiete & Anfahrtszeiten</a></li>
+					<li><a href="/blog">Blog - Ratgeber & Elektro-Tipps</a></li>
+					<li><a href="/about">Über uns - Unser Team & Qualifikationen</a></li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
