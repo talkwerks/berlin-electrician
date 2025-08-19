@@ -3,6 +3,104 @@ const {
 	title = 'Berlin Elektriker – Schneller, zuverlässiger Service',
 	description = 'Elektromeisterbetrieb in Berlin. 24/7 Notdienst, Installationen, Sicherungskasten-Upgrade, Wallbox/EV-Lader, Smart Home & Beleuchtung.',
 } = Astro.props;
+
+const areaServed = [
+	'Berlin',
+	'Mitte',
+	'Friedrichshain-Kreuzberg',
+	'Pankow',
+	'Charlottenburg-Wilmersdorf',
+	'Spandau',
+	'Steglitz-Zehlendorf',
+	'Tempelhof-Schöneberg',
+	'Neukölln',
+	'Treptow-Köpenick',
+	'Marzahn-Hellersdorf',
+	'Lichtenberg',
+	'Reinickendorf',
+];
+
+const businessSchema = {
+	'@context': 'https://schema.org',
+	'@type': ['LocalBusiness', 'Electrician', 'AutoRepair'],
+	'@id': '#business',
+	'name': 'Berlin Elektriker',
+	'image': '/favicon.svg',
+	'telephone': '+49 30 123 45 678',
+	'email': 'hallo@berlin-elektriker.de',
+	'priceRange': '€€',
+	'address': {
+		'@type': 'PostalAddress',
+		'streetAddress': 'Beispielstraße 12',
+		'addressLocality': 'Berlin',
+		'postalCode': '10115',
+		'addressCountry': 'DE',
+	},
+	'geo': {
+		'@type': 'GeoCoordinates',
+		'latitude': 52.520008,
+		'longitude': 13.404954,
+	},
+	'areaServed': areaServed,
+	'openingHoursSpecification': [
+		{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '18:00' },
+		{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday','Sunday'], opens: '00:00', closes: '00:00' },
+	],
+	'hasOfferCatalog': {
+		'@type': 'OfferCatalog',
+		'name': 'Leistungen',
+		'itemListElement': [
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Notdienst',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'Elektriker Notdienst Berlin', serviceType: 'Emergency electrical repairs', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'Stromausfall Hilfe', serviceType: 'Power outage diagnostics & fix', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Sicherungskasten & Schutz',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'Sicherungskasten erneuern', serviceType: 'Panel upgrade / RCD/MCB retrofit', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'Überspannungsschutz installieren', serviceType: 'Surge protection install', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Wallbox & Energie',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'Wallbox installieren', serviceType: 'EV charger install & Anmeldung', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Prüfungen',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'E‑Check', serviceType: 'Electrical safety check', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'DGUV V3 Prüfung', serviceType: 'DGUV V3 testing', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Sprechanlage & Smart Home',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'Sprechanlage installieren', serviceType: 'Intercom systems', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'Smart Home / KNX', serviceType: 'Smart home planning & install', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+			{
+				'@type': 'OfferCatalog',
+				'name': 'Haushalt & Montage',
+				'itemListElement': [
+					{ '@type': 'Service', name: 'Herd anschließen', serviceType: 'Appliance connection', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'Lampenmontage', serviceType: 'Lighting installation', areaServed: 'Berlin', provider: { '@id': '#business' } },
+					{ '@type': 'Service', name: 'Netzwerkverkabelung', serviceType: 'Structured cabling', areaServed: 'Berlin', provider: { '@id': '#business' } },
+				],
+			},
+		],
+	},
+};
 ---
 <!doctype html>
 <html lang="de">
@@ -16,6 +114,7 @@ const {
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="/styles/global.css" />
+		<script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
 	</head>
 	<body>
 		<slot />
