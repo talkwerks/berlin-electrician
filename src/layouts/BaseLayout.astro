@@ -111,11 +111,10 @@ const businessSchema = {
 		<meta name="description" content={description} />
 		<title>{title}</title>
 		<link rel="canonical" href={(new URL(Astro.url.pathname, Astro.site)).toString()} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="/styles/global.css" />
 		<script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
+		<meta name="theme-color" content="#0b1220" />
+		<meta name="color-scheme" content="dark light" />
 	</head>
 	<body>
 		<slot />
