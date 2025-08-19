@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const bezirke = [
+	"Mitte",
+	"Friedrichshain-Kreuzberg",
+	"Pankow",
+	"Charlottenburg-Wilmersdorf",
+	"Spandau",
+	"Steglitz-Zehlendorf",
+	"Tempelhof-Schöneberg",
+	"Neukölln",
+	"Treptow-Köpenick",
+	"Marzahn-Hellersdorf",
+	"Lichtenberg",
+	"Reinickendorf",
+];
+
+const kieze = [
+	"Prenzlauer Berg","Kreuzberg","Friedrichshain","Charlottenburg","Wilmersdorf","Neukölln","Schöneberg","Tempelhof","Moabit","Wedding","Mitte","Köpenick","Adlershof","Spandau","Lichtenberg","Marzahn"
+];
+---
+<BaseLayout title="Elektriker Berlin – Lokale Seite: Servicegebiete, Anfahrt & Besonderheiten" description="Lokale Einsatzgebiete in Berlin, Anfahrtszeiten, Wegbeschreibungen ab Sehenswürdigkeiten, Wetter-Herausforderungen, Branchen, Kieze & Anbieter-Vergleich.">
+	<Nav />
+	<main class="container">
+		<section class="hero">
+			<span class="kicker">Berlin – lokal & schnell</span>
+			<h1>Elektriker Berlin – Ihre lokale Serviceseite</h1>
+			<p>Wir sind in ganz Berlin unterwegs: kurze Reaktionszeiten, transparente Preise und normgerechte Ausführung. Hier finden Sie lokale Details zu Servicegebieten, Anfahrt und Besonderheiten in der Hauptstadt.</p>
+			<a class="cta" href="/contact">Jetzt Termin anfragen</a>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Lokales Einsatzgebiet</h2>
+				<p>Wir decken alle 12 Bezirke ab – auch abends und am Wochenende im Notfall.</p>
+				<div class="locations-list">
+					{bezirke.map((b) => (<div>{b}</div>))}
+				</div>
+			</div>
+			<div class="card">
+				<h2>Anfahrtszeiten (typisch)</h2>
+				<ul>
+					<li>Mitte, Prenzlauer Berg, Friedrichshain, Kreuzberg: 20–40 Min</li>
+					<li>Charlottenburg, Wilmersdorf, Schöneberg, Neukölln: 25–50 Min</li>
+					<li>Tempelhof, Moabit, Wedding, Pankow: 25–45 Min</li>
+					<li>Treptow‑Köpenick, Lichtenberg, Marzahn‑Hellersdorf: 30–60 Min</li>
+					<li>Reinickendorf, Spandau, Steglitz‑Zehlendorf: 35–65 Min</li>
+				</ul>
+				<p>Abweichungen je nach Verkehrslage und Auftragslage möglich.</p>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Wegbeschreibungen ab Sehenswürdigkeiten</h2>
+				<ul>
+					<li><strong>Brandenburger Tor → Mitte/Kiez-Einsätze:</strong> über Ebertstraße/Unter den Linden Richtung Mitte; zentral in 10–25 Min erreichbar.</li>
+					<li><strong>Hauptbahnhof → Prenzlauer Berg/Friedrichshain:</strong> via B96a/Invalidenstraße → Danziger Str.; 20–35 Min je nach Verkehr.</li>
+					<li><strong>Alexanderplatz → Kreuzberg/Neukölln:</strong> über Holzmarktstr. → Skalitzer Str.; 20–35 Min.</li>
+					<li><strong>Kurfürstendamm → Charlottenburg/Wilmersdorf/Schöneberg:</strong> innerstädtisch 10–30 Min.</li>
+					<li><strong>BER Flughafen → Süd/Ost (Treptow‑Köpenick/Neukölln):</strong> via A113; 25–45 Min.</li>
+				</ul>
+				<p>Für detaillierte Anfahrt nutzen wir je nach Lage die schnellsten innerstädtischen Routen.</p>
+			</div>
+			<div class="card">
+				<h2>Lokale Wetter‑Herausforderungen</h2>
+				<ul>
+					<li><strong>Sommergewitter/Überspannung:</strong> Empfehlung: SPD/Überspannungsschutz am Zählerschrank und in Unterverteilungen.</li>
+					<li><strong>Winter/Feuchtigkeit:</strong> Schutzarten im Außenbereich (IP‑Klassen) und FI‑Schutz (RCD) prüfen; Steckdosen/Leuchten abdichten.</li>
+					<li><strong>Hitzeperioden:</strong> zusätzliche Lastspitzen berücksichtigen (Klimageräte, Ladegeräte); Absicherung und Leitungsquerschnitte checken.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Branchen & Arbeitgeber, die wir unterstützen</h2>
+				<p>Wir arbeiten für Privatkunden und Gewerbe in Büros, Praxen, Läden und Produktion – z. B. in Technologie‑, Gesundheits‑ und Bildungsumgebungen.</p>
+				<ul>
+					<li>Büro‑ und Tech‑Standorte (z. B. Adlershof, Mediaspree, City West)</li>
+					<li>Gesundheitswesen (Praxen, Pflege, Labore)</li>
+					<li>Einzelhandel & Gastronomie (Neuverkabelung, Beleuchtung, Kassenplätze)</li>
+					<li>Handwerk & Leichtindustrie (Werkstätten, Lager, Wallbox‑Flotten)</li>
+				</ul>
+				<p>Hinweis: Referenzen auf Anfrage – ohne Nennung einzelner Marken/Logos an dieser Stelle.</p>
+			</div>
+			<div class="card">
+				<h2>Kiez‑Spezifika</h2>
+				<p>Berlin ist vielfältig – Installationssituationen sind es auch. Wir kennen typische Altbau‑Themen in Prenzlauer Berg und Kreuzberg ebenso wie Neubau‑Standards in Adlershof oder City West.</p>
+				<div class="locations-list">
+					{kieze.map((k) => (<div>{k}</div>))}
+				</div>
+			</div>
+		</section>
+
+		<section class="grid">
+			<div class="card">
+				<h2>Vergleich zu anderen Anbietern</h2>
+				<ul>
+					<li><strong>Direkter Betrieb statt Vermittler:</strong> Kein Callcenter – Sie sprechen mit unserem Elektro‑Team.</li>
+					<li><strong>Transparente Preise:</strong> Festpreise für Standards, klare Kostenvoranschläge für Projekte.</li>
+					<li><strong>Dokumentation:</strong> Messprotokolle, Fotodoku und Übergabe – auf Wunsch digital.</li>
+					<li><strong>Schnelle Verfügbarkeit:</strong> Kurze Wege innerhalb der Bezirke, Notdienst 24/7.</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Jetzt anfragen</h2>
+				<p>Beschreiben Sie kurz Ihr Anliegen – wir melden uns schnell mit Terminvorschlag und Preis.</p>
+				<p><a class="cta" href="/contact">Kontakt aufnehmen</a></p>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+
